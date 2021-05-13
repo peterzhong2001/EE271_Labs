@@ -1,0 +1,12 @@
+module stabilizer (in1, in2, A, B, clk, reset);
+	input logic in1, in2, clk, reset;
+	output logic A, B;
+	
+	logic X, Y;
+	
+	D_FF d1 (.q(X), .d(in1), .clk, .reset);
+	D_FF d2 (.q(A), .d(X), .clk, .reset);
+	D_FF d3 (.q(Y), .d(in2), .clk, .reset);
+	D_FF d4 (.q(B), .d(Y), .clk, .reset);
+
+endmodule 

@@ -1,0 +1,241 @@
+|DE1_SoC
+CLOCK_50 => stabilizer:s1.clk
+CLOCK_50 => input_processing:IP.clk
+CLOCK_50 => light_control:LC.clk
+HEX0[0] << light_control:LC.hexout[0]
+HEX0[1] << light_control:LC.hexout[1]
+HEX0[2] << light_control:LC.hexout[2]
+HEX0[3] << light_control:LC.hexout[3]
+HEX0[4] << light_control:LC.hexout[4]
+HEX0[5] << light_control:LC.hexout[5]
+HEX0[6] << light_control:LC.hexout[6]
+HEX1[0] << <VCC>
+HEX1[1] << <VCC>
+HEX1[2] << <VCC>
+HEX1[3] << <VCC>
+HEX1[4] << <VCC>
+HEX1[5] << <VCC>
+HEX1[6] << <VCC>
+HEX2[0] << <VCC>
+HEX2[1] << <VCC>
+HEX2[2] << <VCC>
+HEX2[3] << <VCC>
+HEX2[4] << <VCC>
+HEX2[5] << <VCC>
+HEX2[6] << <VCC>
+HEX3[0] << <VCC>
+HEX3[1] << <VCC>
+HEX3[2] << <VCC>
+HEX3[3] << <VCC>
+HEX3[4] << <VCC>
+HEX3[5] << <VCC>
+HEX3[6] << <VCC>
+HEX4[0] << <VCC>
+HEX4[1] << <VCC>
+HEX4[2] << <VCC>
+HEX4[3] << <VCC>
+HEX4[4] << <VCC>
+HEX4[5] << <VCC>
+HEX4[6] << <VCC>
+HEX5[0] << <VCC>
+HEX5[1] << <VCC>
+HEX5[2] << <VCC>
+HEX5[3] << <VCC>
+HEX5[4] << <VCC>
+HEX5[5] << <VCC>
+HEX5[6] << <VCC>
+KEY[0] => stabilizer:s1.in2
+KEY[1] => ~NO_FANOUT~
+KEY[2] => ~NO_FANOUT~
+KEY[3] => stabilizer:s1.in1
+LEDR[0] << <GND>
+LEDR[1] << light_control:LC.ledout[0]
+LEDR[2] << light_control:LC.ledout[1]
+LEDR[3] << light_control:LC.ledout[2]
+LEDR[4] << light_control:LC.ledout[3]
+LEDR[5] << light_control:LC.ledout[4]
+LEDR[6] << light_control:LC.ledout[5]
+LEDR[7] << light_control:LC.ledout[6]
+LEDR[8] << light_control:LC.ledout[7]
+LEDR[9] << light_control:LC.ledout[8]
+SW[0] => ~NO_FANOUT~
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => light_control:LC.reset
+
+
+|DE1_SoC|stabilizer:s1
+in1 => D_FF:d1.d
+in2 => D_FF:d3.d
+A <= D_FF:d2.q
+B <= D_FF:d4.q
+clk => D_FF:d1.clk
+clk => D_FF:d2.clk
+clk => D_FF:d3.clk
+clk => D_FF:d4.clk
+
+
+|DE1_SoC|stabilizer:s1|D_FF:d1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+
+
+|DE1_SoC|stabilizer:s1|D_FF:d2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+
+
+|DE1_SoC|stabilizer:s1|D_FF:d3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+
+
+|DE1_SoC|stabilizer:s1|D_FF:d4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+
+
+|DE1_SoC|input_processing:IP
+A => always0.IN0
+A => always1.IN0
+A => always1.IN0
+A => Selector0.IN1
+B => always0.IN1
+B => always1.IN1
+B => always1.IN1
+B => Selector1.IN1
+out[0] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+clk => ps[0].CLK
+clk => ps[1].CLK
+clk => ps[2].CLK
+clk => ps[3].CLK
+clk => ps[4].CLK
+clk => ps[5].CLK
+clk => ps[6].CLK
+clk => ps[7].CLK
+clk => ps[8].CLK
+clk => ps[9].CLK
+clk => ps[10].CLK
+clk => ps[11].CLK
+clk => ps[12].CLK
+clk => ps[13].CLK
+clk => ps[14].CLK
+clk => ps[15].CLK
+clk => ps[16].CLK
+clk => ps[17].CLK
+clk => ps[18].CLK
+clk => ps[19].CLK
+clk => ps[20].CLK
+clk => ps[21].CLK
+clk => ps[22].CLK
+clk => ps[23].CLK
+clk => ps[24].CLK
+clk => ps[25].CLK
+clk => ps[26].CLK
+clk => ps[27].CLK
+clk => ps[28].CLK
+clk => ps[29].CLK
+clk => ps[30].CLK
+clk => ps[31].CLK
+
+
+|DE1_SoC|light_control:LC
+player1 => ns.OUTPUTSELECT
+player1 => ns.OUTPUTSELECT
+player1 => ledout.OUTPUTSELECT
+player1 => ledout.OUTPUTSELECT
+player1 => Selector0.IN9
+player1 => Selector2.IN20
+player1 => Selector1.IN11
+player1 => Selector2.IN21
+player1 => Selector3.IN21
+player1 => Selector10.IN19
+player1 => Selector11.IN19
+player1 => Selector12.IN19
+player1 => Selector13.IN19
+player1 => Selector14.IN19
+player1 => Selector15.IN19
+player1 => Selector16.IN19
+player1 => ledout.DATAA
+player1 => ledout.DATAA
+player1 => Selector7.IN7
+player1 => Selector8.IN7
+player1 => Selector1.IN6
+player1 => Selector2.IN9
+player1 => Selector2.IN10
+player2 => ledout.OUTPUTSELECT
+player2 => ledout.OUTPUTSELECT
+player2 => ns.DATAA
+player2 => ledout.DATAA
+player2 => ledout.DATAA
+player2 => Selector4.IN7
+player2 => Selector5.IN7
+player2 => Selector6.IN7
+player2 => Selector8.IN6
+player2 => Selector9.IN7
+player2 => ns.DATAA
+ledout[0] <= Selector18.DB_MAX_OUTPUT_PORT_TYPE
+ledout[1] <= Selector17.DB_MAX_OUTPUT_PORT_TYPE
+ledout[2] <= Selector16.DB_MAX_OUTPUT_PORT_TYPE
+ledout[3] <= Selector15.DB_MAX_OUTPUT_PORT_TYPE
+ledout[4] <= Selector14.DB_MAX_OUTPUT_PORT_TYPE
+ledout[5] <= Selector13.DB_MAX_OUTPUT_PORT_TYPE
+ledout[6] <= Selector12.DB_MAX_OUTPUT_PORT_TYPE
+ledout[7] <= Selector11.DB_MAX_OUTPUT_PORT_TYPE
+ledout[8] <= Selector10.DB_MAX_OUTPUT_PORT_TYPE
+hexout[0] <= Selector9.DB_MAX_OUTPUT_PORT_TYPE
+hexout[1] <= Selector8.DB_MAX_OUTPUT_PORT_TYPE
+hexout[2] <= Selector7.DB_MAX_OUTPUT_PORT_TYPE
+hexout[3] <= Selector6.DB_MAX_OUTPUT_PORT_TYPE
+hexout[4] <= Selector5.DB_MAX_OUTPUT_PORT_TYPE
+hexout[5] <= <VCC>
+hexout[6] <= Selector4.DB_MAX_OUTPUT_PORT_TYPE
+clk => ps[0].CLK
+clk => ps[1].CLK
+clk => ps[2].CLK
+clk => ps[3].CLK
+clk => ps[4].CLK
+clk => ps[5].CLK
+clk => ps[6].CLK
+clk => ps[7].CLK
+clk => ps[8].CLK
+clk => ps[9].CLK
+clk => ps[10].CLK
+clk => ps[11].CLK
+clk => ps[12].CLK
+clk => ps[13].CLK
+clk => ps[14].CLK
+clk => ps[15].CLK
+clk => ps[16].CLK
+clk => ps[17].CLK
+clk => ps[18].CLK
+clk => ps[19].CLK
+clk => ps[20].CLK
+clk => ps[21].CLK
+clk => ps[22].CLK
+clk => ps[23].CLK
+clk => ps[24].CLK
+clk => ps[25].CLK
+clk => ps[26].CLK
+clk => ps[27].CLK
+clk => ps[28].CLK
+clk => ps[29].CLK
+clk => ps[30].CLK
+clk => ps[31].CLK
+reset => ps.OUTPUTSELECT
+reset => ps.OUTPUTSELECT
+reset => ps.OUTPUTSELECT
+reset => ps.OUTPUTSELECT
+
+

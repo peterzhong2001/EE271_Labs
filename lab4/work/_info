@@ -1,0 +1,244 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/UW/ee271labs/lab1
+vDE1_SoC
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1611623194
+!i10b 1
+!s100 jBEM[DgGz0T<0D8Se<^3T2
+I=UEB:[`ehA9k4iGWNM9j_3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 !s105 DE1_SoC_sv_unit
+S1
+Z4 dD:/UW/ee271labs/lab4
+Z5 w1611621686
+Z6 8./DE1_SoC.sv
+Z7 F./DE1_SoC.sv
+L0 2
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1611623194.000000
+Z10 !s107 ./DE1_SoC.sv|
+Z11 !s90 -reportprogress|300|./DE1_SoC.sv|
+!i113 1
+Z12 tCvgOpt 0
+n@d@e1_@so@c
+vDE1_SoC_2
+R0
+Z13 !s110 1611623532
+!i10b 1
+!s100 7l;jZ@W6kQ:H@Q:Roo>o^1
+IXPoeoj<ldLPQh<K8g2Xob2
+R2
+Z14 !s105 DE1_SoC_2_sv_unit
+S1
+R4
+Z15 w1611623500
+Z16 8./DE1_SoC_2.sv
+Z17 F./DE1_SoC_2.sv
+L0 2
+R8
+r1
+!s85 0
+31
+Z18 !s108 1611623532.000000
+Z19 !s107 ./DE1_SoC_2.sv|
+Z20 !s90 -reportprogress|300|./DE1_SoC_2.sv|
+!i113 1
+R12
+n@d@e1_@so@c_2
+vDE1_SoC_2_testbench
+R0
+R13
+!i10b 1
+!s100 h2zGnI2oH6c23D2E[``[z0
+IIg=aPQH4gk3YKYQ<bB63m1
+R2
+R14
+S1
+R4
+R15
+R16
+R17
+L0 22
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!i113 1
+R12
+n@d@e1_@so@c_2_testbench
+vDE1_SoC_testbench
+R0
+R1
+!i10b 1
+!s100 HT`ACjaEUn3CgkNgQ4NQj1
+I^m:4zo9LeWWla[?VGO`6S0
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 19
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+n@d@e1_@so@c_testbench
+vdriver
+R0
+R13
+!i10b 1
+!s100 _AIThgZPPHSGCKbYNY>gd0
+IOaK_:DJ:6i<K[0gZ`lYae2
+R2
+!s105 driver_sv_unit
+S1
+R4
+w1611620243
+8./driver.sv
+F./driver.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R18
+!s107 ./driver.sv|
+!s90 -reportprogress|300|./driver.sv|
+!i113 1
+R12
+vlab3
+R0
+R13
+!i10b 1
+!s100 4Q1:bg]e^da48]PPabNG@0
+Ije9MKll>e_]hak?;jQ8O`3
+R2
+!s105 lab3_sv_unit
+S1
+R4
+w1611618338
+8./lab3.sv
+F./lab3.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R18
+!s107 ./lab3.sv|
+!s90 -reportprogress|300|./lab3.sv|
+!i113 1
+R12
+vmux2_1
+R0
+Z21 !s110 1611099505
+!i10b 1
+!s100 db@k@fnga:kY6M:UDM?iV1
+IJ>QNS`gdkcliNLo;gQk_83
+R2
+Z22 !s105 mux2_1_sv_unit
+S1
+Z23 dD:/UW/ee271labs/lab3
+Z24 w1609802794
+Z25 8./mux2_1.sv
+Z26 F./mux2_1.sv
+L0 1
+R8
+r1
+!s85 0
+31
+Z27 !s108 1611099504.000000
+Z28 !s107 ./mux2_1.sv|
+Z29 !s90 -reportprogress|300|./mux2_1.sv|
+!i113 1
+R12
+vmux2_1_testbench
+R0
+R21
+!i10b 1
+!s100 AaPWH7@z6J3I9g7Ce@1ED1
+I;eMHfQ<@c56k5bMBE8Am71
+R2
+R22
+S1
+R23
+R24
+R25
+R26
+L0 8
+R8
+r1
+!s85 0
+31
+R27
+R28
+R29
+!i113 1
+R12
+vseg7
+R0
+R13
+!i10b 1
+!s100 I<D8c@AT4O1Z@0>kY[He_0
+IO:JE5RkHWH77F^3WKlDVb1
+R2
+!s105 seg7_sv_unit
+S1
+R4
+w1611616583
+8./seg7.sv
+F./seg7.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R18
+!s107 ./seg7.sv|
+!s90 -reportprogress|300|./seg7.sv|
+!i113 1
+R12
+vseg7_2
+R0
+R13
+!i10b 1
+!s100 LCkoe>`R8iH`BBER=US<d1
+I4lRJA=RA5B8N<NM;cnkF_0
+R2
+!s105 seg7_2_sv_unit
+S1
+R4
+w1611616734
+8./seg7_2.sv
+F./seg7_2.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R18
+!s107 ./seg7_2.sv|
+!s90 -reportprogress|300|./seg7_2.sv|
+!i113 1
+R12
