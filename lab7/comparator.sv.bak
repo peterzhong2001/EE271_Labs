@@ -1,7 +1,0 @@
-module comparator (in1, in2, result);
-
-	input logic [9:0] in1, in2;
-	output logic result;
-	
-
-endmodule 
